@@ -1,9 +1,9 @@
-import { ProRenderer } from './engine/Renderer';
-import { brushCategories, brushPresets } from './engine/brushPresets';
-import { blendModes } from './engine/document';
-import { createInitialDocument } from './engine/document';
-import { saveDocument } from './storage/projectStore';
-import type { BrushPreset, DocumentState, RendererStats, StrokePoint, TextureKind, Tool } from './types/app';
+import { ProRenderer } from './engine/Renderer.js';
+import { brushCategories, brushPresets } from './engine/brushPresets.js';
+import { blendModes } from './engine/document.js';
+import { createInitialDocument } from './engine/document.js';
+import { saveDocument } from './storage/projectStore.js';
+import type { BrushPreset, DocumentState, RendererStats, StrokePoint, TextureKind, Tool } from './types/app.js';
 
 const textures: TextureKind[] = ['rough-paper', 'smooth-paper', 'watercolor-paper', 'canvas', 'cardboard', 'charcoal', 'pastel', 'oil', 'photo-grain'];
 const tools: Tool[] = ['brush', 'smudge', 'eraser', 'fill', 'selection', 'transform'];

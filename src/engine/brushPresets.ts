@@ -1,4 +1,4 @@
-import type { BrushPreset, TextureKind } from '../types/app';
+import type { BrushPreset, TextureKind } from '../types/app.js';
 
 const categories = ['Pencil', 'Sketching', 'Ink', 'Calligraphy', 'Painting', 'Oil', 'Acrylic', 'Watercolor', 'Gouache', 'Airbrush', 'Charcoal', 'Pastel', 'Texture', 'Organic', 'Spray', 'Special Effects'];
 const textures: TextureKind[] = ['rough-paper', 'smooth-paper', 'watercolor-paper', 'canvas', 'cardboard', 'charcoal', 'pastel', 'oil', 'photo-grain'];

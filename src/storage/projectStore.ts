@@ -1,4 +1,4 @@
-import type { DocumentState } from '../types/app';
+import type { DocumentState } from '../types/app.js';
 
 const DB = 'procrearte-studio';
 const STORE = 'documents';

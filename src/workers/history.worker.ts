@@ -1,4 +1,4 @@
-import type { HistoryEntry } from '../types/app';
+import type { HistoryEntry } from '../types/app.js';
 
 type Request = { type: 'snapshot'; label: string; rect: { x: number; y: number; width: number; height: number }; bytesHint: number };
 

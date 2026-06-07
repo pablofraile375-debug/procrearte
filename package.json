@@ -6,8 +6,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.app.json && node scripts/build.mjs",
     "check": "tsc -p tsconfig.app.json --pretty false",
-    "dev": "node scripts/dev-server.mjs",
-    "preview": "node scripts/dev-server.mjs dist"
+    "dev": "npm run build && node scripts/dev-server.mjs dist",
+    "preview": "npm run build && node scripts/dev-server.mjs dist"
   },
   "dependencies": {}
 }

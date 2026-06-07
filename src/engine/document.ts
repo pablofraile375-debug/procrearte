@@ -1,5 +1,5 @@
-import { brushPresets } from './brushPresets';
-import type { BlendMode, DocumentState, Layer } from '../types/app';
+import { brushPresets } from './brushPresets.js';
+import type { BlendMode, DocumentState, Layer } from '../types/app.js';
 
 export const blendModes: BlendMode[] = ['normal', 'multiply', 'screen', 'overlay', 'darken', 'lighten', 'soft-light', 'hard-light', 'color-dodge', 'linear-dodge', 'color-burn', 'difference', 'exclusion', 'hue', 'saturation', 'color', 'luminosity'];
 

@@ -1,4 +1,4 @@
-import type { BrushPreset, RendererStats, StrokePoint, TextureKind } from '../types/app';
+import type { BrushPreset, RendererStats, StrokePoint, TextureKind } from '../types/app.js';
 
 type DrawOptions = { color: string; brush: BrushPreset; tool: string; texture: TextureKind };
 
