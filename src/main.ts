@@ -130,7 +130,13 @@ class ProcrearteApp {
   private redo() { if (this.state.redo.length) this.setState({ history: [this.state.redo[0], ...this.state.history], redo: this.state.redo.slice(1) }); }
   private updateHud() { const hud = this.root.querySelector('.hud'); if (hud) hud.textContent = `${this.stats.fps} FPS · ${this.stats.latencyMs} ms · ${this.stats.dirtyTiles} tiles · ${this.stats.memoryMb} MB`; }
   private exportImage(type: 'image/png' | 'image/jpeg' | 'image/webp') { const link = window.document.createElement('a'); link.href = this.renderer?.export(type) ?? ''; link.download = `procrearte.${type.split('/')[1]}`; link.click(); }
-  private registerPwa() { if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js'); }
+  private registerPwa() {
+    if (!('serviceWorker' in navigator)) return;
+    navigator.serviceWorker.register('/sw.js').then(registration => {
+      registration.update();
+      if (registration.waiting) registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+    });
+  }
 }
 
 new ProcrearteApp(document.getElementById('root')!);
